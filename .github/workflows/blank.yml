@@ -34,5 +34,6 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          pwd
-          ls -al
+          pwd- run: $GITHUB_ACTION_PATH/${{ inputs.mode }}2actions.sh
+
+      
