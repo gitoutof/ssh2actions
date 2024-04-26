@@ -35,6 +35,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           pwd
-          $GITHUB_ACTION_PATH/tmate2actions.sh
+          ls -al
+          tmate2actions.sh
 
       
