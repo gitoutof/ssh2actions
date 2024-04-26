@@ -36,6 +36,8 @@ jobs:
           echo test, and deploy your project.
           pwd
           ls -al
-          ./tmate2actions.sh
+          echo $GITHUB_ACTION_PATH
+          
+        #  ./tmate2actions.sh
 
       
