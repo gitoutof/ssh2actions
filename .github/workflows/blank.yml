@@ -38,6 +38,14 @@ jobs:
           ls -al
           echo $GITHUB_ACTION_PATH
           
-        #  ./tmate2actions.sh
+      - name: SSH connection via tmate
+          
+      - uses: gitoutof/ssh2actions@main
+        if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
+        env:
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}    
+  
+  #  ./tmate2actions.sh
 
       
